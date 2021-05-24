@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="reset.css" type="text/css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+
+	<title>Order form</title>
+
+	<script src="script.js" defer></script>
+</head>
+<body">
+
+<div class="wrapper">
+	<!--Заказ-->
+	<div class="order-container">
+		<!--Поле клиента-->
+		<div class="order-client">
+			<div class="client-title">
+				<h2 class="title">Client</h2>
+			</div>
+			<div id = "emptyFields" class="emptyFields">
+				<i class="fas fa-long-arrow-alt-down"></i>
+				You have empty fields
+				<i class="fas fa-long-arrow-alt-down"></i>
+			</div>
+			<form class="client-form">
+				<input type="text" class="client-input" id = "name" placeholder = "name" oninput = "onInput()">
+				<input type="text" class="client-input" id = "surname" placeholder = "surname" oninput = "onInput()">
+				<input type="tel" class="client-input" id = "phone" placeholder = "phone" oninput = "onInput()">
+			</form>
+		</div>
+		<!--Выбор напитка-->
+		<div class="order-drink">
+			<div class="order-title">
+				<h2 class="title">Order</h2>
+			</div>
+			<!--Напиток-->
+			<div class="order-item all-drink">
+				<h3 class="order-item-title" id = "all-drink-title">Choose a drink</h3>
+				<!--Стандартные напитки-->
+				<div class="drink">
+					<div class="raspberry-latte drink-item">
+						<input type="radio" name="drink" id="raspberryLatte" value = "Raspberry latte" onclick="setPrice()">
+						<label for="raspberryLatte">Raspberry latte</label>
+					</div>
+					<div class="kahanamoku drink-item">
+						<input type="radio" name="drink" id="kahanamoku" value = "Kahanamoku" onclick="setPrice()">
+						<label for="kahanamoku">Kahanamoku</label>
+					</div>
+					<div class="cappuccino drink-item">
+						<input type="radio" name="drink" id="cappuccino" value = "Cappuccino" onclick="setPrice()">
+						<label for="cappuccino">Cappuccino</label>
+					</div>
+					<div class="americano drink-item">
+						<input type="radio" name="drink" id="americano" value = "Americano" onclick="setPrice()">
+						<label for="americano">Americano</label>
+					</div>
+					<div class="cold-bru drink-item">
+						<input type="radio" name="drink" id="coldBru" value = "Cold bru" onclick="setPrice()">
+						<label for="coldBru">Cold bru</label>
+					</div>
+					<div class="ginger drink-item">
+						<input type="radio" name="drink" id="ginger" value = "Ginger" onclick="setPrice()">
+						<label for="ginger">Ginger</label>
+					</div>
+					<div class="latte drink-item">
+						<input type="radio" name="drink" id="latte" value = "Latte" onclick="setPrice()">
+						<label for="latte">Latte</label>
+					</div>
+					<div class="raf drink-item">
+						<input type="radio" name="drink" id="raf" value = "Raf" onclick="setPrice()">
+						<label for="raf">Raf</label>
+					</div>
+				</div>
+			</div>
+			<!--Количество-->
+			<div class="order-item number">
+				<h3 class="order-item-title" id = "number-title">Enter quantity</h3>
+				<div class="number-item">
+					<input type="tel" class = "number-input" id = "number" oninput = "onInput()" onclick = "setPrice()" value="1">
+					<div class="max-drink-container" id = "max-drink-container">
+						<i class="fas fa-exclamation-triangle"></i>
+						<span class = "max-drink" id = "max-drink">Maximum 3 drinks</span>
+					</div>
+				</div>		
+			</div>
+			<!--Цена-->
+			<div class="order-item price">
+				<h3 class="order-item-title">Price</h3>
+				<div class="price-item">
+					<p class = "price-input" id = "price">0</p>
+				</div>		
+			</div>
+			<!--Кнопка добавить заказ-->
+			<div class="order-drink-btn" id = "order-drink-btn"></div>
+		</div>
+	</div>
+	<div class="info-container">
+		<!--Таблица-->
+		<div class="table-container">
+			<h2 class = "title">Table of Orders</h2>
+			<div class = "emptyDataBase" id="emptyDataBase">
+				<i class="fas fa-exclamation-triangle"></i>
+				The DataBase is currently empty
+			</div>
+			<div class="table-wrapper">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Drink</th>
+							<th>Number</th>
+							<th>Price</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody id = "tBody">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!--Общая сводка-->
+		<div class="common-data-wrapper">
+			<h2 class="title">Statistics</h2>
+			<div class = "common-data-item all-order">
+				Total orders: 
+				<p id = "all-order"></p>
+			</div>
+			<div class = "common-data-item sum-of-orders">
+				Total amount of orders: 
+				<p id = "sum-of-orders"></p>
+			</div>
+			<div class = "common-data-item minimum-order-amount">
+				Minimum order amount: 
+				<p id = "minimum-order-amount"></p>
+			</div>
+			<div class = "common-data-item maximum-order-amount">
+				Maximum order amount: 
+				<p id = "maximum-order-amount"></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

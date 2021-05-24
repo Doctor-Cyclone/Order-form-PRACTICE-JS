@@ -1,0 +1,308 @@
+body{
+	background-color: #4A4E59;
+	font-family: 'Livvic', sans-serif;
+	margin: 0 auto;
+	color: #fff;
+}
+/*************** Scrollbar ****************/
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+	border-radius: 15px;
+	background: #645455;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 15px;
+	background: #BA9C7C;
+}
+.wrapper{
+	width: 1300px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/*************** All Title ****************/
+.title{
+	font-size: 37px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 30px 40px 30px 47px;
+	cursor: default;
+}
+/**************** Empty Fields ******************/
+.emptyFields{
+	position: absolute;
+	display: none;
+	align-items: center;
+	top: 70px;
+	left: 14px;
+	font-size: 20px;
+	color: #ffa500;
+}
+.emptyFields .fas{
+	padding: 0 10px;
+	font-size: 16px;
+	color: #ffa500;
+}
+/********************* Клиент *********************/
+.order-client{
+	position: relative;
+	width: 280px;
+	height: 280px;
+	margin: 37px 0 15px 0;
+	background-color: rgba(236, 176, 153, 0.3);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 27px;
+}
+.client-form{
+	margin-left: 47px;
+}
+.client-form .client-input{
+	width: 185px;
+	padding: 8px 12px 8px 12px;
+	margin-bottom: 14px;
+
+	font-family: inherit;
+	font-size: 16px;
+	color: #fff;
+	background-color: transparent;
+
+	border: 1px solid #fff;
+	border-radius: 65px;
+	outline: none;
+}
+.client-form .client-input::-webkit-input-placeholder{
+	color: #fff;
+}
+.client-form .client-input:last-child{
+	margin-bottom: 0;
+}
+/********************* Напиток *********************/
+.order-drink{
+	width: 280px;
+	height: 550px;
+	background-color: rgba(236, 176, 153, 0.3);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 27px;
+}
+.order-item{
+	margin-left: 47px;
+}
+.all-drink{
+	margin-bottom: 20px;
+}
+.number{
+	margin-bottom: 10px;
+}
+.order-item-title{
+	   display: flex;
+	width: 180px;
+	position: relative;
+	margin-bottom: 9px;
+	padding-bottom: 5px;
+	cursor: default;
+	font-size: 18px;
+	font-weight: lighter;
+}
+.order-item-title:after{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #BA9C7C;
+}
+.drink-item{
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.drink-item label{
+	cursor: pointer;
+}
+.drink-item label:hover{
+	color: #A3CEB6;
+}
+.drink-item input{
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.drink-item input[type = 'radio']:checked + label{
+	color: #A3CEB6;
+}
+.number-item .number-input{
+	width: 33px;
+	height: 25px;
+
+	padding: 0 5px;
+	margin-right: 5px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	outline: none;
+
+	font-family: inherit;
+	color: #A3CEB6;
+	font-size: 16px;
+	text-align: center;
+}
+.number-item .max-drink-container{
+	display: none;
+	color: #ffa500;
+}
+.number-item .fas{
+	color: #ffa500;
+}
+.price-item .price-input{
+	width: 70px;
+	height: 25px;
+
+	padding: 3px 5px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	outline: none;
+
+	font-family: inherit;
+	color: #A3CEB6;
+	font-size: 16px;
+	text-align: center;
+}
+/******************* Button *******************/
+.order-drink-btn{
+	display: flex;
+	justify-content: center;
+}
+.order-drink-btn .add-order-btn{
+	width: 185px;
+	height: 35px;
+	margin-top: 20px;
+
+	text-transform: uppercase;
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+
+	background-color: rgba(249, 206, 139, 0.5);
+	outline: none;
+	border: none;
+	border-radius: 32px;
+	transition: all 0.1s linear;
+}
+.order-drink-btn .add-order-btn:hover{
+	transform: scale(1.05);
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.67);
+	transition: all 0.1s linear;
+}
+.order-drink-btn .add-order-btn:active{
+	transform: scale(0.98);
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.67);
+	transition: all 0.1s linear;
+}
+.order-drink-btn .add-order-btn:focus{
+	border: none;
+}
+/*********************** ТАБЛИЦА ***********************/
+.table-container{
+	width: 900px;
+	height: 500px;
+	background-color: rgba(236, 176, 153, 0.3);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 27px;
+	margin: 37px 0 15px 0;
+}
+.emptyDataBase{
+	align-items: center;
+	display: none;
+	margin: 0 0 5px 47px;
+	color: #ffa500;	
+	font-size: 20px;
+	font-weight: lighter;
+}
+.emptyDataBase .fas{
+	margin-right: 5px;
+	font-size: 14px;
+}
+.table-wrapper{
+	max-height: 381px;
+	overflow-y: auto;
+}
+.table{
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	width: 860px;
+	margin: 0 19px;
+	font-size: 16px;
+}
+.table thead{
+	border-bottom: 2px solid #F9CE8B;
+}
+.table thead th{
+	padding: 10px 0;
+}
+.table tbody td{
+	padding: 10px 0;
+	border-right: 1px solid rgba(249, 206, 139, 0.5);
+	text-align: center;
+}
+.table tbody tr{
+	border-bottom: 1px solid rgba(249, 206, 139, 0.5);
+}
+.table tbody td:last-child{
+	border-right: none;
+}
+.action-btn{
+	display: flex;
+	justify-content: space-around;
+}
+.table .delBtn{
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+.table .delBtn .far,
+.table .delBtn .fas{
+	color: #fff;
+	font-size: 20px;
+	transition: all 0.1s linear;
+}
+.table .delBtn .far:hover{
+	color: #A92929;
+	transform: scale(1.4);
+	transition: all 0.1s linear;
+}
+.table .delBtn .fas:hover{
+	color: #30D930;
+	transform: scale(1.4);
+	transition: all 0.1s linear;
+}
+.table .delBtn .far:active,
+.table .delBtn .fas:active{
+	transform: scale(1.0);
+	transition: all 0.1s linear;
+}
+/******************* Статистика ********************/
+.common-data-wrapper .title{
+	padding: 5px 0 25px 0;
+}
+.common-data-wrapper{
+	padding: 25px;
+	border-radius: 27px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	background-color: #7B6B6C;	
+}
+.common-data-wrapper p{
+	display: inline-block;
+	color: #ffa500;
+}
+.common-data-item{
+	margin-bottom: 15px;
+}

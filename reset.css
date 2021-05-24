@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, img, ul, li,
+form, label, footer, header, menu, nav, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 16px;
+}
+body{
+    line-height: 1;
+}
+footer, header, menu, nav{ 
+    display: block;
+}
+nav ul{
+    list-style: none;
+}
+a{
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+button {
+  cursor: pointer;
+}
